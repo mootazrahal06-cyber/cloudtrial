@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cloud Trial</title>
+<style>
+  :root {
+    --bg: #f5f8ff;
+    --fg: #14213d;
+    --muted: #5b6b8c;
+    --accent: #3b6df0;
+    --accent-dark: #2a52c4;
+    --card: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0e1424;
+      --fg: #eaf0ff;
+      --muted: #9aa8c7;
+      --accent: #6c93ff;
+      --accent-dark: #8aa8ff;
+      --card: #172038;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 16px;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.5;
+  }
+  main {
+    width: 100%;
+    max-width: 560px;
+    padding: clamp(24px, 6vw, 56px);
+    background: var(--card);
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(20, 33, 61, 0.12);
+    text-align: center;
+  }
+  h1 {
+    margin: 0 0 12px;
+    font-size: clamp(2rem, 7vw, 3rem);
+    letter-spacing: -0.02em;
+  }
+  p {
+    margin: 0 0 28px;
+    color: var(--muted);
+    font-size: clamp(1rem, 2.5vw, 1.125rem);
+  }
+  a.button {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 999px;
+    background: var(--accent);
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.2s;
+  }
+  a.button:hover, a.button:focus-visible {
+    background: var(--accent-dark);
+    transform: translateY(-1px);
+  }
+</style>
+</head>
+<body>
+  <main>
+    <h1>Cloud Trial</h1>
+    <p>Une petite page d'accueil de test, créée depuis une session cloud. Simple, légère et responsive.</p>
+    <a class="button" href="#">Commencer</a>
+  </main>
+</body>
+</html>
